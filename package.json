@@ -1,7 +1,7 @@
 {
   "name": "tunely",
   "version": "1.0.0",
-  "description": "Full CRUD app with MongoDB, Mongoose, and Express.",
+  "description": "An app for tracking a music collection. Full CRUD app with MongoDB, Mongoose, and Express.",
   "main": "server.js",
   "directories": {
     "doc": "docs"
