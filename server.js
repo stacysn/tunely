@@ -5,6 +5,12 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
+
+
+//DATABASE
+
+var db = require('./models');
+
 //ROUTES!
 
 app.get("/", function homepage (req, res){
