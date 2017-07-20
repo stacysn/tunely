@@ -10,14 +10,17 @@ app.use(express.static('public'));
 //DATABASE
 
 var db = require('./models');
+var controllers = require('./controllers');
 
 //ROUTES!
 
 app.get("/", function homepage (req, res){
   res.sendFile('views/index.html', {root: __dirname});
   console.log("DIRNAMEasdfsadf;sda", __dirname);
-})
+});
 
+app.get('/api', controllers.api.index);
+app.get('/albums', controllers.albums.index);
 
 
 
