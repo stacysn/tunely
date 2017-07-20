@@ -1,3 +1,5 @@
+console.log("SANITY CHECKKKKK");
+
 /* CLIENT-SIDE JS
  *
  * You may edit this file as you see fit.  Try to separate different components
