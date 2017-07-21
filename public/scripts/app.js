@@ -35,6 +35,10 @@ function renderMultipleAlbums(albums) {
 
 function renderAlbum(album) {
   console.log('rendering album', album);
+  var songString = "";
+
+
+
   var albumHtml = (`
     <div class="row album">
 
@@ -65,6 +69,7 @@ function renderAlbum(album) {
                     <h4 class='inline-header'>Released date:</h4>
                     <span class='album-releaseDate'>${album.releaseDate}</span>
                   </li>
+
                 </ul>
               </div>
 
