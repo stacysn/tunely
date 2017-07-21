@@ -36,8 +36,9 @@ function renderMultipleAlbums(albums) {
 function renderAlbum(album) {
   console.log('rendering album', album);
   var songString = "";
-
-
+  album.songs.forEach(function (song) {
+    songString = `${songString} - (${song.trackNumber}) ${song.name}`
+  });
 
   var albumHtml = (`
     <div class="row album">
@@ -68,6 +69,11 @@ function renderAlbum(album) {
                   <li class="list-group-item">
                     <h4 class='inline-header'>Released date:</h4>
                     <span class='album-releaseDate'>${album.releaseDate}</span>
+                  </li>
+                  
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Songs:</h4>
+                    <span>${songString}</span>
                   </li>
 
                 </ul>
