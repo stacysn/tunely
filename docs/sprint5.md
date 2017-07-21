@@ -1,5 +1,6 @@
-# Tune.ly Sprint 5
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 Let's allow users to edit album information.  
@@ -71,3 +72,6 @@ We're going to add a button that allows our users to edit an album.
 1. Add a new modal for editing instead of letting the user make changes directly in the album row.
 
 1. Add a cancel button for the edits.
+=======
+This is a solution branch, for [sprint 5 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint5.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf

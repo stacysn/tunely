@@ -1,5 +1,6 @@
-# Tune.ly Sprint 2
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 This sprint we will:
@@ -89,3 +90,6 @@ curl (from Terminal):
 1. Add HTML5 form validations to the form.  For example, require that a user fill in all the fields before your app processes the form. (What do you think should happen if the user submits the form with empty fields?)
 
 1. Convert the form to a modal, and add a link to the right-side of the "Albums" header to open it!
+=======
+This is a solution branch, for [sprint 2 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint2.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf

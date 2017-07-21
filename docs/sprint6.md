@@ -1,5 +1,6 @@
-# Sprint 6
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 Now let's allow our users to update and delete songs.  We're going to create a new modal for the updating part.
@@ -110,3 +111,6 @@ Let's allow users to save their edits.
 ## Finally
 
 If you got this far, we are SUPER impressed.  Congratulations!
+=======
+This is a solution branch, for [sprint 6 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint6.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf

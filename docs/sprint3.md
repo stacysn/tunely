@@ -1,5 +1,6 @@
-# Tune.ly Sprint 3
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 This sprint we will:
@@ -271,3 +272,6 @@ POST /api/albums/:album_id/songs
 You should also have a working app!  Congratulations!
 
 ![](http://i.giphy.com/wue4QtxncWuE8.gif)
+=======
+This is a solution branch, for [sprint 3 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint3.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf

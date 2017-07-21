@@ -1,5 +1,6 @@
-# Tune.ly Sprint 1
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 This sprint we will:
@@ -320,3 +321,6 @@ The app has a single-page view that makes a GET request to the API with AJAX and
 This completes the **Read** component of our **CRUD** app, for the moment.
 
 **Good job!**
+=======
+This is a solution branch, for [sprint 1 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint1.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf

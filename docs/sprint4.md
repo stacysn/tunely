@@ -1,5 +1,6 @@
-# Tune.ly Sprint 4
+# Redirect
 
+<<<<<<< HEAD
 ## Overview
 
 We've now finished **Create** and **Read**. It's time to move toward **Update** and **Delete**.  
@@ -57,3 +58,6 @@ Now you can tie the previous front-end and back-end changes together.
 1. Prompt the user with an alert asking "Are you sure?" when they click delete. Only proceed if they confirm.  
 
 1. Add an animation for album deletion.
+=======
+This is a solution branch, for [sprint 4 instructions, see the master branch](https://github.com/SF-WDI-LABS/tunely/blob/master/docs/sprint4.md).
+>>>>>>> 860a6af4dbe0c2879976e24e34961c340b0fd6cf
