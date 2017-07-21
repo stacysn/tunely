@@ -13,7 +13,7 @@ const create = function (req, res) {
       if (err) return res.status(500).json(err);
       album.songs.push(song);
       album.save();
-      res.json(album);
+      res.json(song);
     })
   })
 };

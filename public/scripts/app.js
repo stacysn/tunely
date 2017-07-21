@@ -17,8 +17,19 @@ const handleNewSongSubmit = function (e) {
       trackNumber: trackNumber,
       name: songName
     },
-    success: function (json) {
-      console.log('Post succeeded!', json);
+    success: function (song) {
+      console.log('Post succeeded!', song);
+      $.ajax({
+        method: "GET",
+        url: "/api/albums/" + album_id,
+        success: function (album) {
+          console.log('Here\'s the album we found!', album);
+          // render new album
+        },
+        error: function (e) {
+          console.log('GET failed!');
+        }
+      })
     },
     error: function (e) {
       console.log('post failed!', e);

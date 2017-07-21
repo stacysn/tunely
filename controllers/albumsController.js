@@ -30,9 +30,15 @@ function create(req, res) {
   });
 }
 
-// GET /api/albums/:albumId
+// GET /api/albums/:album_id
 function show(req, res) {
   // find one album by id and send it back as JSON
+  const album_id = req.params.album_id;
+  db.Album.findById(album_id, function (err, album) {
+    if (err) return res.status(500).json(err);
+    if (album === null) return res.status(404).json({message: "album not found!"});
+    res.json(album);
+  })
 }
 
 // DELETE /api/albums/:albumId

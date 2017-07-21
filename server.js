@@ -20,10 +20,10 @@ app.get("/", function homepage (req, res){
 })
 
 app.get('/api', controllers.api.index);
-
 app.get('/api/albums', controllers.albums.index);
-app.post('/api/albums', controllers.albums.create);
+app.get('/api/albums/:album_id', controllers.albums.show);
 
+app.post('/api/albums', controllers.albums.create);
 app.post('/api/albums/:album_id/songs', controllers.albumsSongs.create);
 
 /**********
