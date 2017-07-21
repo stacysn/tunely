@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+var controllers = require('./controllers');
 
 //DATABASE
 
@@ -20,7 +20,7 @@ app.get("/", function homepage (req, res){
   console.log("DIRNAMEasdfsadf;sda", __dirname);
 })
 
-
+app.get('/api', controllers.api.index);
 
 app.get('/api/albums', controllers.albums.index);
 app.post('/api/albums', controllers.albums.create);
