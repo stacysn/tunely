@@ -5,6 +5,27 @@
  *
  */
 
+const handleNewSongSubmit = function (e) {
+  const album_id = $('#songModal').data('album-id');
+  const trackNumber = $('#trackNumber').val();
+  const songName = $('#songName').val();
+
+  $.ajax({
+    method: "POST",
+    url: "/api/albums/" + album_id + "/songs",
+    data: {
+      trackNumber: trackNumber,
+      name: songName
+    },
+    success: function (json) {
+      console.log('Post succeeded!', json);
+    },
+    error: function (e) {
+      console.log('post failed!', e);
+    }
+  });
+  $('#songModal').modal('hide');
+};
 
 $(document).ready(function() {
   console.log('app.js loaded!');
@@ -15,6 +36,8 @@ $(document).ready(function() {
     $('#songModal').data('album-id', id);
     $('#songModal').modal('show');
   });
+
+  $('#saveSong').on('click', handleNewSongSubmit);
 
   $.ajax({
     method: 'GET',
