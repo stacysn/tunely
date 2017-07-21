@@ -5,9 +5,50 @@
  *
  */
 
+const handleNewSongSubmit = function (e) {
+  const album_id = $('#songModal').data('album-id');
+  const trackNumber = $('#trackNumber').val();
+  const songName = $('#songName').val();
+
+  $.ajax({
+    method: "POST",
+    url: "/api/albums/" + album_id + "/songs",
+    data: {
+      trackNumber: trackNumber,
+      name: songName
+    },
+    success: function (song) {
+      console.log('Post succeeded!', song);
+      $.ajax({
+        method: "GET",
+        url: "/api/albums/" + album_id,
+        success: function (album) {
+          console.log('Here\'s the album we found!', album);
+          // render new album
+        },
+        error: function (e) {
+          console.log('GET failed!');
+        }
+      })
+    },
+    error: function (e) {
+      console.log('post failed!', e);
+    }
+  });
+  $('#songModal').modal('hide');
+};
 
 $(document).ready(function() {
   console.log('app.js loaded!');
+  $('#albums').on('click', '.add-song', function (e) {
+    console.log('add-song clicked');
+    const id = $(this).closest('.album').data('album-id');
+    console.log('id', id);
+    $('#songModal').data('album-id', id);
+    $('#songModal').modal('show');
+  });
+
+  $('#saveSong').on('click', handleNewSongSubmit);
 
   $.ajax({
     method: 'GET',
@@ -41,7 +82,7 @@ function renderAlbum(album) {
   });
 
   var albumHtml = (`
-    <div class="row album">
+    <div class="row album" data-album-id="${album._id}">
 
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-default">
@@ -83,6 +124,7 @@ function renderAlbum(album) {
             <!-- end of album internal row -->
 
             <div class='panel-footer'>
+              <button class="btn btn-primary add-song">Add Song</button>
             </div>
 
           </div>

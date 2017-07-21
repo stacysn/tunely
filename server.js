@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 
-// serve static files from public folder
+// serve static :files from public folder
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -17,13 +17,14 @@ var db = require('./models');
 
 app.get("/", function homepage (req, res){
   res.sendFile('views/index.html', {root: __dirname});
-  console.log("DIRNAMEasdfsadf;sda", __dirname);
 })
 
 app.get('/api', controllers.api.index);
-
 app.get('/api/albums', controllers.albums.index);
+app.get('/api/albums/:album_id', controllers.albums.show);
+
 app.post('/api/albums', controllers.albums.create);
+app.post('/api/albums/:album_id/songs', controllers.albumsSongs.create);
 
 /**********
  * SERVER *
