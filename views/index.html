@@ -8,14 +8,22 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/public/styles/styles.css">
+=======
+    <link rel="stylesheet" href="/styles/styles.css">
+>>>>>>> c9292a059fd0733ba1ca594212beab0e5fa54aa6
 
     <!-- VENDOR SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
+<<<<<<< HEAD
     <script src="/public/scripts/app.js"></script>
+=======
+    <script src="/scripts/app.js"></script>
+>>>>>>> c9292a059fd0733ba1ca594212beab0e5fa54aa6
   </head>
   <body>
     <div class="jumbotron">
@@ -25,67 +33,85 @@
       </div>
     </div>
 
+
+
+
+    <!-- BEGIN FORM SAMPLE -->
+
+    <section id='album-form' class="container">
+      <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <form class="form-horizontal">
+          <fieldset>
+
+            <!-- Form Name -->
+            <legend>Add New Album</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Album Name</label>
+              <div class="col-md-4">
+              <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="artistName">Artist Name</label>
+              <div class="col-md-4">
+              <input id="textinput" name="artistName" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="releaseDate">Release Date</label>
+              <div class="col-md-4">
+              <input id="releaseDate" name="releaseDate" type="text" placeholder="1992" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="genres">Genres (separated by commas)</label>
+              <div class="col-md-4">
+                <textarea class="form-control" id="genres" name="genres">rock, pop</textarea>
+              </div>
+            </div>
+
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="singlebutton">Save Album</label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      </div>
+    </section>
+
+     <!--   END FORM SAMPLE -->
+
+
+
+
     <section class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h2>Albums</h2>
         </div>
       </div>
-      <!-- albums! -->
-      <div id='albums'>
 
+      <!-- albums container! -->
+      <div id='albums'></div>
 
-
-
-          <!-- one album -->
-          <div class="row album">
-
-            <div class="col-md-10 col-md-offset-1">
-              <div class="panel panel-default">
-                <div class="panel-body">
-
-
-                <!-- begin album internal row -->
-                  <div class='row'>
-                    <div class="col-md-3 col-xs-12 thumbnail album-art">
-                      <img src="../public/images/800x800.png" alt="album image">
-                    </div>
-
-                    <div class="col-md-9 col-xs-12">
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <h4 class='inline-header'>Album Name:</h4>
-                          <span class='album-name'>Ladyhawke</span>
-                        </li>
-
-                        <li class="list-group-item">
-                          <h4 class='inline-header'>Artist Name:</h4>
-                          <span class='artist-name'>Ladyhawke</span>
-                        </li>
-
-                        <li class="list-group-item">
-                          <h4 class='inline-header'>Released date:</h4>
-                          <span class='album-releaseDate'>2008, November 18</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-                  <!-- end of album internal row -->
-
-                  <div class='panel-footer'>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end one album -->
-
-
-
-
-      </div>
     </section>
 
     <!-- begin songModal: this is not visible until you call .modal() on it -->
@@ -127,4 +153,6 @@
 
 
   </body>
+
+
 </html>
