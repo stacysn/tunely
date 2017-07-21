@@ -8,6 +8,13 @@
 
 $(document).ready(function() {
   console.log('app.js loaded!');
+  $('#albums').on('click', '.add-song', function (e) {
+    console.log('add-song clicked');
+    const id = $(this).closest('.album').data('album-id');
+    console.log('id', id);
+    $('#songModal').data('album-id', id);
+    $('#songModal').modal('show');
+  });
 
   $.ajax({
     method: 'GET',
@@ -41,7 +48,7 @@ function renderAlbum(album) {
   });
 
   var albumHtml = (`
-    <div class="row album">
+    <div class="row album" data-album-id="${album._id}">
 
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-default">
@@ -83,6 +90,7 @@ function renderAlbum(album) {
             <!-- end of album internal row -->
 
             <div class='panel-footer'>
+              <button class="btn btn-primary add-song">Add Song</button>
             </div>
 
           </div>
